@@ -579,7 +579,7 @@ class File_Therion_Station implements File_Therion_IReferenceable
      * @param File_Therion_Survey|null Use null to reset context
      * @throws InvalidArgumentException
      */
-    public function setSurveyContext(File_Therion_Survey $survey=null)
+    public function setSurveyContext(?File_Therion_Survey $survey=null)
     {
         $this->_survey = $survey;
     }
@@ -751,7 +751,7 @@ class File_Therion_Station implements File_Therion_IReferenceable
      * 
      * @param File_Therion_Station $station clear only this link
      */
-    public function clearEquates(File_Therion_Station $station = null)
+    public function clearEquates(?File_Therion_Station $station = null)
     {
         if (is_null($station)) {
             // clear all stations
@@ -823,7 +823,7 @@ class File_Therion_Station implements File_Therion_IReferenceable
      * @return string empty string or equate command
      * @throws UnexpectedValueException when view-context is not available
      */
-    public function toEquateString(File_Therion_Survey $viewCTX = null)
+    public function toEquateString(?File_Therion_Survey $viewCTX = null)
     {
         if (is_null($viewCTX)) $viewCTX = $this->getSurveyContext();
         

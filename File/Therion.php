@@ -265,7 +265,7 @@ class File_Therion implements Countable
     public static function parse(
         $url,
         $recurse=null,
-        File_Therion_Reader $reader=null)
+        ?File_Therion_Reader $reader=null)
     {
         $th = new File_Therion($url);
         $th->fetch($reader);
@@ -410,7 +410,7 @@ class File_Therion implements Countable
      * @throws File_Therion_IOException
      * @throws InvalidArgumentException
      */
-    public function fetch(File_Therion_Reader $reader = null)
+    public function fetch(?File_Therion_Reader $reader = null)
     {
         // use default reader in case null parameter
         if (is_null($reader)) {
@@ -901,7 +901,7 @@ class File_Therion implements Countable
      * @throws File_Therion_IOException in case of IO error
      * @throws File_Therion_Exception for other errors
      */
-    public function write(File_Therion_Writer $writer = null)
+    public function write(?File_Therion_Writer $writer = null)
     {
         if (is_null($writer)) {
             $writer = new File_Therion_DirectWriter();
