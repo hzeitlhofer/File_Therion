@@ -678,7 +678,7 @@ class File_Therion_Survey
      * 
      * @param File_Therion_Survey|null $parent Use null to reset parent
      */
-    public function setParent(File_Therion_Survey $parent=null)
+    public function setParent(?File_Therion_Survey $parent=null)
     {
         $this->_parent = $parent;
     }

@@ -319,7 +319,7 @@ class File_Therion_Grade
      * @throws File_Therion_SyntaxException when units mismatch occurs (e.g. 'tape' with angle-unit)
      * @todo implement logical units checking: not all units can be used with "tape" quantity for example
      */
-    public function setDefinition($quantity, File_Therion_Unit $unit = null)
+    public function setDefinition($quantity, ?File_Therion_Unit $unit = null)
     {
         // When called for several items, add them one by one
         if (is_array($quantity)) {
